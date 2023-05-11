@@ -5,11 +5,12 @@ let user = new mongoose.Schema({
   age: Number,
   favorites: [String],
   marks: [Number],
-  address: {
-    village: String,
-    cty: String,
-    state: String,
-    pin: Number,
-    user: mongoose.Schema.Types.ObjectId,
-  },
+});
+
+let address = new mongoose.Schema({
+  village: String,
+  cty: String,
+  state: String,
+  pin: Number,
+  user: mongoose.Schema.Types.ObjectId,
 });
